@@ -52,40 +52,6 @@
   
     <!-- Playlist -->
     <div class="playlist">
-        <div class="song">
-            <div class="thumb" style="background-image: url('https://i.ytimg.com/vi/jTLhQf5KJSc/maxresdefault.jpg')">
-            </div>
-            <div class="body">
-              <h3 class="title">Music name</h3>
-              <p class="author">Singer</p>
-            </div>
-            <div class="option">
-              <i class="fas fa-ellipsis-h"></i>
-            </div>
-          </div>
-          <div class="song">
-            <div class="thumb" style="background-image: url('https://i.ytimg.com/vi/jTLhQf5KJSc/maxresdefault.jpg')">
-            </div>
-            <div class="body">
-              <h3 class="title">Music name</h3>
-              <p class="author">Singer</p>
-            </div>
-            <div class="option">
-              <i class="fas fa-ellipsis-h"></i>
-            </div>
-          </div>
-          <div class="song">
-            <div class="thumb" style="background-image: url('https://i.ytimg.com/vi/jTLhQf5KJSc/maxresdefault.jpg')">
-            </div>
-            <div class="body">
-              <h3 class="title">Music name</h3>
-              <p class="author">Singer</p>
-            </div>
-            <div class="option">
-              <i class="fas fa-ellipsis-h"></i>
-            </div>
-          </div>
-        </div>
     </div>
   </div>
   
@@ -303,13 +269,13 @@
             //xu ly random bat/tat random
             randomBtn.onclick = function(e) {
              _this.isRandom = !_this.isRandom
-             this.setConfig('isRandom', _this.isRandom)
+             _this.setConfig('isRandom', _this.isRandom)
               randomBtn.classList.toggle('active', _this.isRandom)
             }
             //Xử lý phát lại một bài hát
             repeatBtn.onclick = function(e) {
               _this.isRepeat = !_this.isRepeat
-             this.setConfig('isRepeat', _this.isRepeat)
+             _this.setConfig('isRepeat', _this.isRepeat)
               repeatBtn.classList.toggle('active', _this.isRepeat)
             }
 
@@ -404,8 +370,8 @@
             this.render();
            
             // hiển thị trạng thái ban đầu của button repeat 
-            randomBtn.classList.toggle('active', _this.isRandom)
-            repeatBtn.classList.toggle('active', _this.isRepeat)
+            randomBtn.classList.toggle('active', this.isRandom)
+            repeatBtn.classList.toggle('active', this.isRepeat)
           }
       }
       app.start()
